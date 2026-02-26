@@ -19,8 +19,8 @@ Visualize spatial distribution
 
 Enable further land-use classification and environmental analysis
 
-📂 Dataset Description
-1️⃣ ESA WorldCover 2021
+## Dataset Description
+##ESA WorldCover 2021
 
 File: worldcover_bbox_delhi_ncr_2021.tif
 
@@ -46,7 +46,7 @@ Bare land
 
 Source: European Space Agency (ESA)
 
-2️⃣ Delhi NCR Region Boundary
+## Delhi NCR Region Boundary
 
 File: delhi_ncr_region.geojson
 
@@ -54,7 +54,7 @@ Format: GeoJSON
 
 Defines administrative boundary of Delhi NCR
 
-3️⃣ Delhi Airshed Boundary
+## Delhi Airshed Boundary
 
 File: delhi_airshed.geojson
 
@@ -62,7 +62,7 @@ Format: GeoJSON
 
 Represents atmospheric influence boundary used for air quality analysis
 
-🛠️ Technologies Used
+## Technologies Used
 
 Python 3
 
@@ -78,7 +78,7 @@ Matplotlib
 
 Shapely
 
-⚙️ Methodology
+## Methodology
 Step 1: Load Vector Data
 
 Read NCR and Airshed GeoJSON files using GeoPandas.
@@ -101,7 +101,7 @@ Plot clipped raster.
 
 Overlay NCR and Airshed boundaries.
 
-📊 Output
+## Output
 
 The output includes:
 
@@ -115,7 +115,7 @@ NCR boundary
 
 Airshed boundary
 
-📌 Applications
+## Applications
 
 This analysis can be extended for:
 
@@ -131,7 +131,7 @@ Air quality modeling support
 
 Sustainable urban planning research
 
-🚀 How to Run
+## How to Run
 
 Upload the following files to Google Colab:
 
@@ -147,7 +147,7 @@ pip install geopandas rasterio rioxarray shapely matplotlib
 
 Run the Python script provided in the notebook.
 
-📈 Future Improvements
+## Future Improvements
 
 Land cover class area calculation
 
@@ -159,7 +159,7 @@ Time-series comparison (multi-year data)
 
 Integration with air pollution datasets
 
-👩‍💻 Author
+## Author
 
 Abhienaya Sri
 Final Year Student
