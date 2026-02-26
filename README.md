@@ -1,5 +1,5 @@
-🌍 Land Use & Spatial Analysis of Delhi NCR using ESA WorldCover 2021
-📌 Project Overview
+# Land Use & Spatial Analysis of Delhi NCR using ESA WorldCover 2021
+## Project Overview
 
 This project performs geospatial analysis of Delhi NCR using:
 
