@@ -1,70 +1,80 @@
-# Land Use & Spatial Analysis of Delhi NCR using ESA WorldCover 2021
-## Project Overview
+# 🌍 Spatial Analysis of Land Use in Delhi NCR Using ESA WorldCover 2021
+1. Project Overview
 
-This project performs geospatial analysis of Delhi NCR using:
+This project performs geospatial analysis of land use and land cover (LULC) patterns in the Delhi National Capital Region (NCR) using high-resolution ESA WorldCover 2021 data.
 
-ESA WorldCover 2021 Land Use/Land Cover raster data
+The primary objective is to integrate raster-based land cover data with administrative and environmental boundary datasets to support urban and environmental analysis.
 
-Delhi NCR administrative boundary
+The workflow includes raster clipping, coordinate system harmonization, and spatial visualization of land cover distribution within Delhi NCR and its associated airshed region.
 
-Delhi Airshed boundary
+2. Study Area
 
-The objective is to:
+The study focuses on:
 
-Clip land cover raster to NCR boundary
+Delhi NCR Administrative Boundary
 
-Align coordinate systems (CRS)
+Delhi Airshed Boundary
 
-Visualize spatial distribution
+These regions are used to spatially constrain and contextualize land cover analysis.
 
-Enable further land-use classification and environmental analysis
-
-## Dataset Description
-##ESA WorldCover 2021
+3. Datasets Used
+3.1 ESA WorldCover 2021
 
 File: worldcover_bbox_delhi_ncr_2021.tif
 
-Resolution: 10m
+Type: Raster (GeoTIFF)
 
-Format: GeoTIFF
-
-Contains land cover classes such as:
-
-Built-up
-
-Cropland
-
-Trees
-
-Grassland
-
-Water
-
-Shrubland
-
-Bare land
+Resolution: 10 meters
 
 Source: European Space Agency (ESA)
 
-## Delhi NCR Region Boundary
+Description: Global land cover dataset containing classified land use categories such as built-up areas, cropland, trees, grassland, water bodies, shrubland, and bare land.
+
+3.2 Delhi NCR Boundary
 
 File: delhi_ncr_region.geojson
 
 Format: GeoJSON
 
-Defines administrative boundary of Delhi NCR
+Description: Administrative boundary defining the spatial extent of Delhi NCR.
 
-## Delhi Airshed Boundary
+3.3 Delhi Airshed Boundary
 
 File: delhi_airshed.geojson
 
 Format: GeoJSON
 
-Represents atmospheric influence boundary used for air quality analysis
+Description: Environmental boundary representing atmospheric influence zone relevant for air quality and pollution modeling studies.
 
-## Technologies Used
+4. Methodology
 
-Python 3
+The analysis pipeline consists of the following steps:
+
+Step 1: Data Ingestion
+
+Vector datasets are loaded using GeoPandas.
+
+Raster dataset is loaded using rioxarray.
+
+Step 2: Coordinate Reference System (CRS) Alignment
+
+All vector layers are reprojected to match the raster CRS to ensure spatial consistency.
+
+Step 3: Raster Clipping
+
+The WorldCover raster is clipped to the Delhi NCR boundary.
+
+This reduces computational load and restricts analysis to the study region.
+
+Step 4: Spatial Visualization
+
+Clipped raster is visualized.
+
+NCR and Airshed boundaries are overlaid for spatial interpretation.
+
+5. Tools and Technologies
+
+Python 3.x
 
 Google Colab
 
@@ -74,40 +84,17 @@ Rasterio
 
 Rioxarray
 
-Matplotlib
-
 Shapely
 
-## Methodology
-Step 1: Load Vector Data
+Matplotlib
 
-Read NCR and Airshed GeoJSON files using GeoPandas.
+6. Output
 
-Step 2: Load Raster Data
+The output of this project includes:
 
-Open ESA WorldCover GeoTIFF using rioxarray.
+Clipped land cover raster specific to Delhi NCR.
 
-Step 3: Coordinate Reference System (CRS) Alignment
-
-Convert vector boundaries to match raster CRS.
-
-Step 4: Raster Clipping
-
-Clip raster to NCR boundary.
-
-Step 5: Visualization
-
-Plot clipped raster.
-
-Overlay NCR and Airshed boundaries.
-
-## Output
-
-The output includes:
-
-Clipped WorldCover raster for Delhi NCR
-
-Visual map showing:
+Integrated visualization of:
 
 Land cover distribution
 
@@ -115,25 +102,29 @@ NCR boundary
 
 Airshed boundary
 
-## Applications
+These outputs form the foundation for further quantitative spatial analysis.
 
-This analysis can be extended for:
+7. Potential Extensions
 
-Built-up area estimation
+This framework can be extended to:
 
-Green cover percentage calculation
+Built-up area quantification
 
-Urban expansion monitoring
+Green cover percentage analysis
 
-Environmental impact assessment
+Zonal statistics computation
 
-Air quality modeling support
+Grid-based urban expansion modeling
 
-Sustainable urban planning research
+Integration with air pollution or meteorological datasets
 
-## How to Run
+Multi-temporal land cover change detection
 
-Upload the following files to Google Colab:
+8. Reproducibility
+
+To reproduce this analysis:
+
+Upload the following files:
 
 worldcover_bbox_delhi_ncr_2021.tif
 
@@ -145,22 +136,10 @@ Install required libraries:
 
 pip install geopandas rasterio rioxarray shapely matplotlib
 
-Run the Python script provided in the notebook.
+Execute the provided Python script in a Jupyter/Colab environment.
 
-## Future Improvements
-
-Land cover class area calculation
-
-Zonal statistics
-
-Grid-based spatial analysis
-
-Time-series comparison (multi-year data)
-
-Integration with air pollution datasets
-
-## Author
+9. Author
 
 Abhienaya Sri
 Final Year Student
-Geospatial & AI Research Enthusiast
+Geospatial Data Analysis & AI Research
