@@ -1,5 +1,5 @@
 # 🌍 Spatial Analysis of Land Use in Delhi NCR Using ESA WorldCover 2021
-1. Project Overview
+## 1. Project Overview
 
 This project performs geospatial analysis of land use and land cover (LULC) patterns in the Delhi National Capital Region (NCR) using high-resolution ESA WorldCover 2021 data.
 
@@ -7,7 +7,7 @@ The primary objective is to integrate raster-based land cover data with administ
 
 The workflow includes raster clipping, coordinate system harmonization, and spatial visualization of land cover distribution within Delhi NCR and its associated airshed region.
 
-2. Study Area
+## 2. Study Area
 
 The study focuses on:
 
@@ -17,7 +17,7 @@ Delhi Airshed Boundary
 
 These regions are used to spatially constrain and contextualize land cover analysis.
 
-3. Datasets Used
+## 3. Datasets Used
 3.1 ESA WorldCover 2021
 
 File: worldcover_bbox_delhi_ncr_2021.tif
@@ -46,7 +46,7 @@ Format: GeoJSON
 
 Description: Environmental boundary representing atmospheric influence zone relevant for air quality and pollution modeling studies.
 
-4. Methodology
+## 4. Methodology
 
 The analysis pipeline consists of the following steps:
 
@@ -72,7 +72,7 @@ Clipped raster is visualized.
 
 NCR and Airshed boundaries are overlaid for spatial interpretation.
 
-5. Tools and Technologies
+## 5. Tools and Technologies
 
 Python 3.x
 
@@ -88,7 +88,7 @@ Shapely
 
 Matplotlib
 
-6. Output
+## 6. Output
 
 The output of this project includes:
 
@@ -104,7 +104,7 @@ Airshed boundary
 
 These outputs form the foundation for further quantitative spatial analysis.
 
-7. Potential Extensions
+## 7. Potential Extensions
 
 This framework can be extended to:
 
@@ -120,7 +120,7 @@ Integration with air pollution or meteorological datasets
 
 Multi-temporal land cover change detection
 
-8. Reproducibility
+## 8. Reproducibility
 
 To reproduce this analysis:
 
@@ -138,8 +138,10 @@ pip install geopandas rasterio rioxarray shapely matplotlib
 
 Execute the provided Python script in a Jupyter/Colab environment.
 
-9. Author
+## 9. Author
 
 Abhienaya Sri
+
 Final Year Student
+
 Geospatial Data Analysis & AI Research
